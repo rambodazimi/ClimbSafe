@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+
+<GridPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.climbsafe.javafx.fxml.controllers.ManageTripsController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="162.39999084472657" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="292.00001220703126" minWidth="10.0" prefWidth="280.00001220703126" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="245.59995117187498" minWidth="10.0" prefWidth="200.79998779296875" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints minHeight="-Infinity" prefHeight="40.0" vgrow="NEVER" />
+   </rowConstraints>
+   <children>
+      <Label text="Week number:" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" />
+      <TextField fx:id="weekField" maxWidth="200.0" minWidth="150.0" GridPane.columnIndex="1" />
+      <Button fx:id="startButton" maxWidth="200.0" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#startClick" text="Start" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+      <Label text="Member to manage:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
+      <ComboBox fx:id="memberComboBox" minWidth="150.0" onAction="#memberChoiceDone" onMouseClicked="#comboBoxClicked" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Line endX="3.727729558944702" endY="239.96817016601562" layoutY="100.0" startX="3.7278892993927" startY="466.2610778808594" GridPane.columnIndex="3" GridPane.rowSpan="2147483647" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Line>
+      <Label text="Authorization code:" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+      <Button fx:id="cancelTripButton" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#cancelClicked" text="Cancel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <Button fx:id="finishButton" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#finishClicked" text="Finish" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <TextField fx:id="codeField" maxWidth="150.4" minWidth="150.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Button fx:id="payButton" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#payMouseClicked" text="Pay" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Label fx:id="errorLabelForTrips" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="444.0" text="Error" textAlignment="RIGHT" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+   </children>
+</GridPane>

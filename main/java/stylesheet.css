@@ -1,0 +1,191 @@
+/* By Abdul to change choice box text color */
+.choice-box .label {
+	-fx-font-family: 'Fuzzy Bubbles';
+     -fx-text-fill: white;
+}
+/* By Abdul to change choice box background color when menu pop-up*/
+.choice-box .menu-item .label{
+	-fx-font-family: 'Fuzzy Bubbles';
+    -fx-text-fill: black;
+}
+/* By Abdul to change choice box text color when hover*/
+.choice-box:hover .label:hover {
+		-fx-font-family: 'Fuzzy Bubbles';
+     -fx-text-fill: #3c4de6;
+}
+
+/* By Abdul to change combo box text color */
+ .combo-box .cell:selected {
+ 	-fx-font-family: 'Fuzzy Bubbles';
+    -fx-text-fill: white;
+}
+/* By Abdul to change combo box text color when hover*/
+ .combo-box:hover .cell:selected {
+ 	-fx-font-family: 'Fuzzy Bubbles';
+    -fx-text-fill: #3c4de6;   
+    -fx-background-color: transparent;
+} 
+
+.choice-box , .combo-box, .button {
+	-fx-text-fill: white;
+	-fx-font-family: Arial Narrow;
+	-fx-font-family: 'Fuzzy Bubbles';
+	-fx-font-weight: bold;
+    -fx-background-color: linear-gradient(to bottom, #3c77e6, #3c4de6);
+	-fx-background-radius: 50.0px;
+    -fx-border-radius: 30.0px;
+    -fx-border-width: 5.0px;
+	 -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 );
+}
+
+.choice-box:hover, .combo-box:hover, .button:hover{
+	-fx-text-fill: #3c4de6;
+	-fx-font-family: Arial Narrow;
+	-fx-font-family: 'Fuzzy Bubbles';	
+	-fx-font-weight: bold;
+ 	-fx-background-color: transparent;
+ 	-fx-border-color:#3c4de6; 
+ 	-fx-border-width:2.0px;
+	 -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 );
+	 -fx-shadow-highlight-color: #00ffff;
+}
+
+/*Added by Fred to override styling for bundle popup window buttons */
+#createBundleButton,
+#confirmEditButton,
+#cancelEditButton,
+#confirmButton,
+#cancelButton{	
+	-fx-font-family: 'Fuzzy Bubbles';
+	-fx-font-size: 19.0pt;
+}
+
+#mainPage{
+	-fx-background-image: url("background.gif");
+	-fx-background-size: cover;
+	-fx-font-family: 'Fuzzy Bubbles';
+}
+
+/*Added by Fred, this is to add custom colors to bundle buttons on hover*/
+#deleteBundleButton:hover, #cancelEditButton:hover, #cancelButton:hover,
+#deleteMemberButton:hover, #deleteButton:hover, #cancelTripButton:hover, #clearButton:hover{
+	-fx-text-fill: white;
+	-fx-background-color:rgba(255.0,101.0,101.0,1.0);	
+	-fx-border-color:transparent;
+	-fx-border-width:0.0px;
+	-fx-font-family: 'Fuzzy Bubbles';
+}
+
+/*Added by Fred, this changes the size of the tabs and removes undesired selection effects*/
+.tab{
+	-fx-margin: 5.0px;	
+	-fx-pref-height: 40.0;	
+	-fx-background-color:white;
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+	
+}
+
+/*Added by Fred, this is to customize the text at the top of each tab*/
+.tab-label {
+	-fx-background-color: transparent;    
+	-fx-alignment: CENTER;
+	-fx-text-fill: black;
+	-fx-font-size: 15.0pt;	
+	-fx-font-family: 'Fuzzy Bubbles';
+}
+
+/*Added by Fred, this is to ensure the tab is big enough and doesnt cut off the tab title text*/
+.tab-header{
+	-fx-pref-height: 40.0;
+}
+
+/*Added by Fred, this is to ensure the tab is big enough and doesnt cut off the tab title text*/
+.tab-pane{
+    -fx-tab-min-height:40.0px;
+    -fx-tab-max-height:40.0px;
+}
+
+/*Added by Fred, this is remove the ugly grey background and streamline the look of the tab headers*/
+.tab-header-background{
+	-fx-background-color: white;	
+}
+
+/*Added by Fred, this adds effects to distinguish between the selected tab and other tabs.*/
+.tab:selected .tab-label { 
+    -fx-text-fill: #009AF9;
+    -fx-font-weight: bold;
+    -fx-padding:4.0;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-border-style: solid solid none solid;	/* Borders added by Abdul */
+    -fx-border-width: 2.0;
+    -fx-border-color: rgba(0.0, 154.0, 249.0, 0.33);/*tweaks to color by fred */ 
+}
+
+/*Added by Fred, this is to customize the labels of columns in tables*/
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+    -fx-font-family: 'Fuzzy Bubbles';
+}
+
+/*Added by Fred, this is to add a different style to a hovered row in a table*/
+.table-row-cell:hover {
+    -fx-background-color: white;
+    -fx-text-background-color: orange;
+    -fx-font-family: 'Fuzzy Bubbles';
+}
+
+/*Added by Fred, this is to add a different style to the selected row in a table*/
+  .table-row-cell:selected {
+   -fx-background-color: orange;
+   -fx-text-background-color: white;      
+   -fx-font-family: 'Fuzzy Bubbles'; 
+} 
+
+/*Added by Fred, this is to customize the labels of columns in tables*/
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-background-color: #61C7FF;
+    -fx-font-size: 12.0pt;
+    -fx-border-width: 2.0;
+    -fx-border-color: #17ADFF;
+    -fx-font-family: 'Fuzzy Bubbles';
+}
+    
+/*Added by Fred, this is to overwrite the look in the bundle popup window to make it look better */
+#pickEquipmentTable .text-field-table-cell .text-field, #pickEquipmentTable .combo-box-table-cell .list-cell{   
+   -fx-text-fill: black; 
+   -fx-font-family: 'Fuzzy Bubbles';      
+}
+
+/*Added by Fred, this is to overwrite the look in the bundle popup window to make it look better */
+#pickEquipmentTable .combo-box-table-cell .combo-box {	
+	-fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0.0 0.0 -1.0 0.0, 0.0, 1.0, 2.0;
+    -fx-background-radius: 3.0px, 3.0px, 2.0px, 1.0px;
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em; 
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+    -fx-font-weight: normal;
+    -fx-border-color:transparent; 
+ 	-fx-border-width:0.0px;
+ 	-fx-font-family: 'Fuzzy Bubbles';
+}
+
+/*Added by Fred, this is to overwrite the font size in the assignment table so the column headers dont overflow */
+#overviewTable .column-header .label {
+    -fx-font-size: 8.0pt;
+    -fx-font-family: 'Fuzzy Bubbles';
+}
+
+.date-picker .text-field {
+    -fx-font: 18.0px "Arial";
+    -fx-font-family: 'Fuzzy Bubbles';
+}
+#clearButton,#saveButton,#refreshButton {
+	-fx-font-size: 18.0pt;
+	-fx-font-family: 'Fuzzy Bubbles';
+}

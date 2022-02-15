@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="mainPage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.climbsafe.javafx.fxml.controllers.MainPageController">
+   <children>
+      <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+      <tabs>
+        <Tab fx:id="setupTabMain" text="Setup">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <fx:include fx:id="setupTab" source="pages/climbSafeSetup.fxml" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                     </children>
+                     <padding>
+                     </padding>
+                  </AnchorPane>
+              </content>
+            </Tab>
+
+
+         <Tab fx:id="memberTabMain" text="MemberManagement">
+            	<fx:include fx:id="memberTab" source="pages/MemberManagement.fxml" />
+            </Tab>
+         <Tab fx:id="guideTabMain" text="Guide">
+               <content>
+               	   <fx:include fx:id="guideTab" source="pages/Guide.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="equipmentTabMain" text="Equipment">
+               <content>
+                     <fx:include fx:id="equipmentTab" source="pages/Equipment.fxml" />
+               </content>
+            </Tab>
+
+            <Tab fx:id="bundlesTabMain" text="Bundles">
+               <content>
+               	<fx:include fx:id="bundlesTab" source="pages/ViewBundles.fxml" />
+               </content>
+            </Tab>
+             <Tab fx:id="assignmentTabMain" text="Assignment">
+               <content>
+                  <fx:include fx:id="assignmentsTab" source="pages/ViewAssignment.fxml" />
+               </content>
+            </Tab>
+
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.climbsafe.javafx.fxml.controllers.MemberManagementController">
+   <children>
+      <Button fx:id="newMemberButton" layoutX="741.0" layoutY="46.0" mnemonicParsing="false" onAction="#onNewMember" prefHeight="26.0" prefWidth="175.0" text="New Member" />
+      <TextField fx:id="emailTextField" layoutX="25.0" layoutY="39.0" prefHeight="26.0" prefWidth="150.0" promptText="Email" />
+    <TextField fx:id="fullNameTextField" layoutX="206.0" layoutY="39.0" prefHeight="26.0" prefWidth="150.0" promptText="Full Name" />
+     
+     
+      <TextField fx:id="emergencyContactTextField" layoutX="28.0" layoutY="103.0" prefHeight="26.0" prefWidth="150.0" promptText="Emergency Contact" />
+      <TextField fx:id="weeksToClimbTextField" layoutX="208.0" layoutY="103.0" prefHeight="26.0" prefWidth="150.0" promptText="Weeks To Climb" />     
+      <PasswordField fx:id="passwordTextField" layoutX="31.0" layoutY="166.0" prefHeight="26.0" prefWidth="150.0" promptText="Password" />     
+      <Text layoutX="25.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="206.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name" />
+      <Text layoutX="208.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weeks To Climb" />     
+      <Text layoutX="209.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Need A Guide?" />
+      <CheckBox fx:id="needAGuideCheckBox" layoutX="318.0" layoutY="183.0" mnemonicParsing="false" />
+      <CheckBox fx:id="needHotelCheckBox" layoutX="318.0" layoutY="149.0" mnemonicParsing="false" />
+      <Button fx:id="updateMemberButton" layoutX="741.0" layoutY="103.0" mnemonicParsing="false" onAction="#onUpdateMember" prefHeight="26.0" prefWidth="175.0" text="Update Member" />
+      <Button fx:id="deleteMemberButton" layoutX="741.0" layoutY="153.0" mnemonicParsing="false" onAction="#onDeleteMember" prefHeight="26.0" prefWidth="175.0" text="Delete Member" textFill="RED" />
+      <Text layoutX="209.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Need Hotel?" />
+      
+      <Text layoutX="31.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text layoutX="28.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Contact" />
+      <TableView fx:id="SelectEquipmentsTable" layoutX="27.0" layoutY="267.0" prefHeight="170.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="EquipmentNameColumn" prefWidth="123.0" text="Name" />
+          <TableColumn fx:id="EquipmentWeightColumn" text="Weight" />
+            <TableColumn fx:id="EquipmentPriceColumn" prefWidth="96.0" text="\$/week" />
+        </columns>
+      </TableView>
+      <TableView fx:id="SelectBundlesTable" layoutX="392.0" layoutY="267.0" prefHeight="170.0" prefWidth="300.0">
+         <columns>
+            <TableColumn fx:id="BundleNameColumn" prefWidth="126.0" text="Name" />
+            <TableColumn fx:id="BundleDiscountColumn" minWidth="3.0" prefWidth="73.0" text="Discount" />
+            <TableColumn fx:id="BundlePriceColumn" prefWidth="99.0" text="\$/week" />
+         </columns>
+      </TableView>
+      <Text layoutX="25.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Equipments" />
+      <Text layoutX="392.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Bundles" />
+      <Text layoutX="392.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected items" />
+      <TableView fx:id="SelectedItemsTable" editable="true" layoutX="392.0" layoutY="40.0" prefHeight="170.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="SelectedItemsName" prefWidth="151.20001220703125" text="Item" />
+          <TableColumn fx:id="SelectedItemsQty" prefWidth="147.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <Button layoutX="28.0" layoutY="452.0" mnemonicParsing="false" onAction="#onAddEquipmentItem" text="Add selected equipment" />
+      <Button layoutX="392.0" layoutY="452.0" mnemonicParsing="false" onAction="#onAddBundleItem" prefWidth="175.0" text="Add selected bundle" />
+      <Text layoutX="741.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Of Members:" />
+      <ComboBox fx:id="listOfMembersComboBox" layoutX="743.0" layoutY="217.0" onAction="#onListOfMembersComboBox" prefWidth="175.0" />
+      <Label fx:id="addPromptLabel" layoutX="701.0" layoutY="267.0" prefHeight="17.0" prefWidth="436.0" text="PromptLabel" textFill="RED" />
+   </children>
+</Pane>
