@@ -1,0 +1,76 @@
+namespace ca.mcgill.ecse.climbsafe.controller;
+
+/*
+@author AbdelrahmanAli
+*/
+class TOAssignment {
+  memberEmail;
+  memberName;
+  guideEmail;
+  guideName;
+  hotelName;
+  Integer startWeek;
+  Integer endWeek;
+  Integer totalCostForGuide;
+  Integer totalCostForEquipment;
+  status;
+  authorizationCode;
+  Integer refundedPercentageAmount;
+}
+	//author FrederikMartin
+class TOBundle {
+	name;
+	Integer discount;
+	Integer totalPricePerWeek;
+	0..1--* TOBundleItem equipments;
+}
+    //author FrederikMartin
+
+class TOBundleItem {
+	equipmentName;
+	Integer weight;
+  	Integer pricePerWeek;
+  	Integer quantity;
+}
+
+
+//author rambodaizmi
+class TOEquipment {
+	name;
+	Integer weight;
+	Integer pricePerWeek;
+}
+
+//author rambodazimi
+class TOGuide {
+	name;
+	emergencyContact;
+	email;
+	password;
+}
+/*
+@author AbdelrahmanAli
+*/
+class TOMember {
+	email;
+	name;
+	emergancyContact;
+	password;
+	Integer weeks;
+	Boolean needGuide;
+	Boolean needHotel;
+	0..1--* TOGenericItem items;
+}
+//author FrederikMartin
+class TOGenericItem {
+	Integer quantity;
+	String name;
+}
+/*
+@author AbdelrahmanAli
+*/
+class TOClimbSafe{
+Integer guideCost;
+Integer numOfWeeks;
+ Date date;
+}
